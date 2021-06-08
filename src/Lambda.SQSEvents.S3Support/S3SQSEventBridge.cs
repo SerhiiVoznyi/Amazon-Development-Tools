@@ -13,7 +13,7 @@
 //   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
-namespace Amazon.Lambda.SQSEvents.Extended
+namespace Amazon.Lambda.SQSEvents.S3Support
 {
     using System;
     using System.IO;
@@ -59,7 +59,7 @@ namespace Amazon.Lambda.SQSEvents.Extended
 
         public async Task<SQSEvent> UpdateMessagesPayloadAsync(SQSEvent sqsEvent)
         {
-            foreach (SQSEvent.SQSMessage message in sqsEvent.Records.Where(IsLargePayloadMessage))
+            foreach (SQSEvent.SQSMessage message in sqsEvent.Records.Where(m => m.IsMessageWithLargePayload()))
             {
                 var messageS3Pointer = ReadMessageS3PointerFromJson(message.Body);
 
@@ -78,13 +78,7 @@ namespace Amazon.Lambda.SQSEvents.Extended
 
         #region Private Methods
 
-        private bool IsLargePayloadMessage(SQSEvent.SQSMessage message)
-        {
-            return message.MessageAttributes.ContainsKey(LargePayloadSizeAttributeName)
-                   && message.Body.Contains(nameof(MessageS3Pointer.S3Key), StringComparison.InvariantCultureIgnoreCase)
-                   && message.Body.Contains(nameof(MessageS3Pointer.S3BucketName),
-                       StringComparison.InvariantCultureIgnoreCase);
-        }
+
 
         private string EmbedS3PointerInReceiptHandle(string receiptHandle, string s3BucketName, string s3Key)
         {

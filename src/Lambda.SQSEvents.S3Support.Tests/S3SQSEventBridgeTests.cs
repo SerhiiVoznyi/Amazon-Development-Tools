@@ -13,12 +13,13 @@
 //   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
-namespace Amazon.Lambda.SQSEvents.Extended.Tests
+namespace Amazon.Lambda.SQSEvents.S3Support.Tests
 {
     using System.Collections.Generic;
     using System.Diagnostics.CodeAnalysis;
     using System.IO;
     using System.Threading.Tasks;
+    using Amazon.Lambda.SQSEvents.S3Support;
     using Amazon.Runtime;
     using Amazon.S3;
     using Amazon.S3.Model;

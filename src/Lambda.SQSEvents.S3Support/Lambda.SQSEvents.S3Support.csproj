@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <Version>0.0.3-alpha</Version>
+    <Description>Provides support for large message payload throws calls to Amazon S3 bucket. This is part of approach for handling SQS Messages with huge message body like in Amazon.SQS.ExtendedClient.</Description>
+    <Summary>Provides support for large message payload throws calls to Amazon S3 bucket. This is part of approach for handling SQS Messages with huge message body like in Amazon.SQS.ExtendedClient.</Summary>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/SerhiiVoznyi/Amazon-Development-Tools</PackageProjectUrl>
+    <PackageIcon>logo.png</PackageIcon>
+    <PackageIconUrl>https://api.nuget.org/v3-flatcontainer/awssdk.core/3.7.0.31/icon</PackageIconUrl>
+    <RepositoryUrl>https://github.com/SerhiiVoznyi/Amazon-Development-Tools</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <PackageTags>#Amazon #Lambda #SQSEvents #Extended</PackageTags>
+    <NeutralLanguage>en</NeutralLanguage>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Serhii Voznyi</Authors>
+    <Title>Amazon.Lambda.SQSEvents.S3Support</Title>
+    <Product>Lambda.SQSEvents.S3Support</Product>
+    <PackageId>Lambda.SQSEvents.S3Support</PackageId>
+    <PackageReleaseNotes>Provides support for large message payload throws calls to Amazon S3 bucket. This is part of approach for handling SQS Messages with huge message body like in Amazon.SQS.ExtendedClient.</PackageReleaseNotes>
+    <Copyright>Copyright © 2021 Serhii Voznyi and open source community</Copyright>
+    <RootNamespace>Amazon.Lambda.SQSEvents.S3Support</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Amazon.Lambda.SQSEvents" Version="1.2.0" />
+    <PackageReference Include="AWSSDK.S3" Version="3.7.1" />
+    <PackageReference Include="Gof.DesignPatterns" Version="1.0.0" />
+    <PackageReference Include="System.Text.Json" Version="5.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\assets\logo.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\..\LICENSE.md">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

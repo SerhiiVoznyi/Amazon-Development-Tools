@@ -13,11 +13,11 @@
 //   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
-namespace Amazon.Lambda.SQSEvents.Extended
+namespace Amazon.Lambda.SQSEvents.S3Support
 {
+    using System.Threading.Tasks;
     using Amazon.S3;
     using DesignPatterns;
-    using System.Threading.Tasks;
 
     /// <summary>
     ///     The IS3SQSEventBridge interface.

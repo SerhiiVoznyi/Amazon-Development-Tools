@@ -4,6 +4,8 @@
     <TargetFramework>net5.0</TargetFramework>
 
     <IsPackable>false</IsPackable>
+
+    <RootNamespace>Amazon.Lambda.SQSEvents.S3Support.Tests</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -22,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Amazon.Lambda.SQSEvents.Extended\Amazon.Lambda.SQSEvents.Extended.csproj" />
+    <ProjectReference Include="..\Lambda.SQSEvents.S3Support\Lambda.SQSEvents.S3Support.csproj" />
   </ItemGroup>
 
 </Project>
