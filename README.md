@@ -14,7 +14,7 @@ This repository contains useful extensions of packages provided by Amazon Dev Te
 
 #### Lambda.SQSEvents.S3Support
 
-[Lambda.SQSEvents.S3Support](https://github.com/SerhiiVoznyi/Amazon-Development-Tools/Lambda.SQSEvents.S3Support) - Provides support for large message payload throws calls to Amazon S3 bucket. This is part of approach for handling SQS Messages with huge message body such as in [Amazon.SQS.ExtendedClient](https://github.com/raol/amazon-sqs-net-extended-client-lib). 
+[Lambda.SQSEvents.S3Support](https://github.com/SerhiiVoznyi/Amazon-Development-Tools/tree/master/src/Lambda.SQSEvents.S3Support) - Provides support for large message payload throws calls to Amazon S3 bucket. This is part of approach for handling SQS Messages with huge message body such as in [Amazon.SQS.ExtendedClient](https://github.com/raol/amazon-sqs-net-extended-client-lib). 
 
 
 
